@@ -4,6 +4,7 @@ from tkinter import filedialog
 
 root = tka.Tk()
 root.title('Simple Text Editor')
+doc = ""
 
 # Create text area
 text_area = tka.Text(root)
@@ -34,7 +35,7 @@ def save_text():
             f.write(text_data)
     else:
         print(doc)
-        messagebox.showinfo(title="Error!", message="No file is open to save, please chose save_as to create a new text file.")
+        messagebox.showinfo(title="Error!", message="No file is open to save, please chose save as to create a new text file.")
 
 def save_text_as():
     filename = filedialog.asksaveasfilename()
